@@ -20,7 +20,7 @@ class BibTexEntry(object):
             self.kind,
             self.name,
             ''.join([
-                '\t%s={%s}\n' % pair
+                '\t%s={%s},\n' % pair
                 for pair in self.fields.items()]))
 
 
