@@ -73,7 +73,7 @@ def name_entry(title: str, last_edit: date, contributors):
     if first_named_contributor is None:
         first_named_contributor = name_user(contributors[0]).lower()
 
-    return '%s%d%s' % (title.split(' ')[0].lower(), last_edit.year, first_named_contributor)
+    return '%s%d%s' % (first_named_contributor, last_edit.year, title.split(' ')[0].lower())
 
 
 def get_last_edit_date(repo: Repository, path: str, branch_name: str):
