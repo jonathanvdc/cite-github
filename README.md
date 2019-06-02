@@ -22,13 +22,5 @@ $ python3 cite-github.py https://github.com/dotnet/docs/blob/master/docs/standar
 
 Note that this is subject to the GitHub API's rate-limit of 60 requests per hour. If you need to perform more requests, then you can provide a GitHub OAuth token as a second argument to `cite-github`:
 ```console
-$ python3 cite-github.py https://github.com/dotnet/docs/blob/master/docs/standard/garbage-collection/fundamentals.md <token>
-@misc{wenzel2019fundamentals,
-	title={Fundamentals of garbage collection},
-	author={Maira Wenzel and Next Turn and Nick Schonning and Dan Mabee and Ron Petrusha and Mike B and Jan Kotas and Aymeric A and xaviex and Mike Jones and Michal Ciechan and Alan and Luke Latham and tompratt-AQ},
-	month={May},
-	year={2019},
-	howpublished={\url{https://github.com/dotnet/docs/blob/master/docs/standard/garbage-collection/fundamentals.md}},
-	note={Accessed on June 1, 2019.},
-}
+$ python3 cite-github.py <url> <token>
 ```
