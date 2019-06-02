@@ -104,7 +104,10 @@ def cite(repo: Repository, path: str, branch_name: str = None):
 def cite_url(gh: Github, url):
     """Cites a file based on its GitHub URL."""
     # GitHub file URLs are formatted as 'https://www.github.com/OWNER/REPO/blob/BRANCH/PATH...'
-    url = url.strip('http://').strip('https://')
+    prefix_index = url.find('://')
+    if prefix_index >= 0:
+        url = url[prefix_index+3:]
+
     pieces = url.split('/')
     repo_slug = '/'.join(pieces[1:3])
     branch_name = pieces[4]
